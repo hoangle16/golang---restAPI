@@ -2,8 +2,8 @@ package user
 
 import "restful_api/entities"
 
-// UserRepository interface
-type UserRepository interface {
+// Repository interface
+type Repository interface {
 	FetchAll() ([]*entities.User, error)
 	FindByID(id uint) (*entities.User, error)
 	Store(u *entities.User) (bool, error)
