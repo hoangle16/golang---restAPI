@@ -10,8 +10,8 @@ type sqliteUserRepository struct {
 	DBConnection *gorm.DB
 }
 
-// NewSqliteBookRepository - return UserRepository
-func NewSqliteBookRepository(DBConn *gorm.DB) Repository {
+// NewSqliteUserRepository - return UserRepository
+func NewSqliteUserRepository(DBConn *gorm.DB) Repository {
 	return &sqliteUserRepository{DBConnection: DBConn}
 }
 

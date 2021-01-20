@@ -12,7 +12,7 @@ func main() {
 	router := http.NewServeMux()
 	sqliteDB := database.GetSqliteConnectionPool()
 
-	userRepo := user.NewSqliteBookRepository(sqliteDB)
+	userRepo := user.NewSqliteUserRepository(sqliteDB)
 	userService := user.NewService(userRepo)
 
 	delivery.MakeUserHandler(router, userService)
